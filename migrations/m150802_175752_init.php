@@ -14,7 +14,7 @@ class m150802_175752_init extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
         $this->createTable(Config::tableName(), [
-            'id' => Schema::TYPE_PK,
+            'id' => $this->primaryKey(),
             'module' => Schema::TYPE_STRING . ' NOT NULL',
             'name' => Schema::TYPE_STRING . ' NOT NULL',
             'label' => Schema::TYPE_STRING . ' NOT NULL',
